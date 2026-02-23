@@ -17,7 +17,7 @@ export default function EspagnePage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="absolute top-0 right-0 w-150 h-150 bg-orange-500/10 blur-[130px] rounded-full -z-10" />
 
-        <div className="2xl:max-w-7xl lg:max-w-5xl mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
+        <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -26,7 +26,7 @@ export default function EspagnePage() {
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-md bg-orange-500/10 border border-orange-500/20 text-orange-500 text-xs font-black uppercase tracking-widest mb-6">
               <Map size={14} /> Service Transfrontalier Espagne
             </div>
-            <h1 className="text-6xl lg:text-8xl font-black uppercase italic mb-8 tracking-tighter">
+            <h1 className="text-4xl lg:text-8xl font-black uppercase italic mb-8 tracking-tighter">
               Déménagement <br />
               <span className="text-orange-500">Espagne</span>
             </h1>
@@ -37,7 +37,7 @@ export default function EspagnePage() {
             </p>
             <Button
               variant={"orange"}
-              className="text-base font-bold group h-12 w-90"
+              className="text-base font-bold group h-12 lg:w-90 w-80"
               asChild
             >
               <Link href="/contact">
