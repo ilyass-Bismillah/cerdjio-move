@@ -20,7 +20,7 @@ export default function EuropePage() {
               <Globe size={40} className="text-black animate-spin-slow" />
             </div>
           </motion.div>
-          <h1 className="text-6xl md:text-8xl font-black uppercase italic mb-6 tracking-tighter">
+          <h1 className="text-5xl md:text-8xl font-black uppercase italic mb-6 tracking-tighter">
             Liaison <span className="text-orange-500">Europe</span>
           </h1>
           <p className="text-gray-500 text-xl max-w-2xl mx-auto">

@@ -10,7 +10,7 @@ export default function EntreprisesPage() {
       <section className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-[1fr_0.7fr] gap-20">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }}>
-             <h1 className="text-6xl lg:text-9xl font-black uppercase mb-8 italic tracking-tighter">
+             <h1 className="text-5xl lg:text-9xl font-black uppercase mb-8 italic tracking-tighter">
                Transfert <br/><span className="text-orange-500">Bureaux</span>
              </h1>
              <p className="text-2xl text-gray-400 mb-12 max-w-2xl font-light">
