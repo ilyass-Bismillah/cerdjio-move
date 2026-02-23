@@ -53,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="py-4 bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="2xl:max-w-7xl lg:max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2 px-3 lg:px-0">
             <div className="bg-orange-600 p-2 rounded-lg text-white">
               <Truck size={24} />
