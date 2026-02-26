@@ -1,11 +1,16 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Truck, ShieldCheck, Clock, MapPin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function ServiceDetail() {
+export const metadata = {
+  title: "Déménagement pour Particuliers | Formules sur Mesure",
+  description:
+    "Accompagnement complet pour votre déménagement résidentiel. Protection, démontage, transport et remontage par des professionnels.",
+};
+
+const ServiceDetail = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white">
       <section className="relative py-20 px-6 border-b border-white/5 bg-linear-to-b from-green-600/10 to-transparent">
@@ -126,4 +131,6 @@ export default function ServiceDetail() {
       </div>
     </div>
   );
-}
+};
+
+export default ServiceDetail;

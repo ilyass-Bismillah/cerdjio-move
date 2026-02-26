@@ -1,10 +1,15 @@
-"use client";
 import { motion } from "framer-motion";
 import { Building2, Monitor, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export default function EntreprisesPage() {
+export const metadata = {
+  title: "Déménagement Professionnel & Transfert de Bureaux",
+  description:
+    "Solutions logistiques pour entreprises : transfert de bureaux, transport de matériel lourd et gestion de parc mobilier en Europe.",
+};
+
+const EntreprisesPage = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white pt-10">
       <section className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto px-6 py-20">
@@ -98,4 +103,6 @@ export default function EntreprisesPage() {
       </div>
     </div>
   );
-}
+};
+
+export default EntreprisesPage;

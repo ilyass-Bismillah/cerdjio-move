@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Clock, Euro, CheckCircle2 } from "lucide-react";
@@ -16,7 +15,13 @@ const prices = [
   { size: "10 m²", volume: "20/25 m³", price: "129" },
 ];
 
-export default function GardeMeubles() {
+export const metadata = {
+  title: "Garde-Meubles Sécurisé | Stockage Court & Long Terme",
+  description:
+    "Besoin d'espace ? Découvrez nos solutions de garde-meubles sécurisés pour stocker vos biens en toute sérénité pendant votre déménagement.",
+};
+
+const GardeMeubles = () => {
   return (
     <div className="bg-gray-900 min-h-screen pb-20">
       <section className="relative h-[50vh] flex items-center bg-black overflow-hidden">
@@ -192,4 +197,6 @@ export default function GardeMeubles() {
       </div>
     </div>
   );
-}
+};
+
+export default GardeMeubles;
