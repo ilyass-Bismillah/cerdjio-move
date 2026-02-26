@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 interface Post {
   title: string;
@@ -21,45 +20,68 @@ interface WordPressData {
   };
 }
 
-async function getWordPressData(): Promise<WordPressData> {
-  const query = `
-    {
-      posts(first: 10) {
-        nodes {
-          title
-          excerpt
-          slug
-          featuredImage {
-            node {
-              sourceUrl
+async function getWordPressData(): Promise<WordPressData | null> {
+  const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+  
+  if (!apiUrl) {
+    console.error("API URL is missing!");
+    return null;
+  }
+
+  try {
+    const query = `
+      {
+        posts(first: 10) {
+          nodes {
+            title
+            excerpt
+            slug
+            featuredImage {
+              node {
+                sourceUrl
+              }
             }
           }
         }
+        generalSettings {
+          title
+          description
+        }
       }
-      generalSettings {
-        title
-        description
-      }
-    }
-  `;
+    `;
 
-  const res = await fetch(process.env.NEXT_PUBLIC_WORDPRESS_API_URL!, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query }),
-    next: { revalidate: 60 }, 
-  });
+    const res = await fetch(apiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query }),
+      next: { revalidate: 60 },
+    });
 
-  if (!res.ok) {
-    throw new Error("Failed to fetch data from WordPress");
+    if (!res.ok) return null;
+    
+    const { data } = await res.json();
+    return data;
+  } catch (error) {
+    console.error("Fetch error:", error);
+    return null;
   }
-
-  const { data } = await res.json();
-  return data;
 }
+
 
 export default async function Home() {
   const data = await getWordPressData();
+
+  if (!data || !data.posts || !data.generalSettings) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold text-red-500">Mouchkil f l-ittisal!</h1>
+          <p className="text-gray-600">T-akkdi men NEXT_PUBLIC_WORDPRESS_API_URL f Vercel.</p>
+        </div>
+      </div>
+    );
+  }
+
   const posts = data.posts.nodes;
 
   return (
@@ -75,44 +97,13 @@ export default async function Home() {
 
       <section className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post: Post) => (
-          <article 
-            key={post.slug} 
-            className="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100"
-          >
-            {post.featuredImage?.node?.sourceUrl && (
-              <div className="relative w-full h-56 overflow-hidden">
-                <Image
-                  src={post.featuredImage.node.sourceUrl}
-                  alt={post.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            )}
-
-            <div className="p-6">
-              <h2 className="text-2xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors">
-                {post.title}
-              </h2>
-              <div 
-                className="mt-3 text-gray-600 leading-relaxed line-clamp-3"
-                dangerouslySetInnerHTML={{ __html: post.excerpt }} 
-              />
-              <div className="mt-6 pt-6 border-t border-gray-50">
-                <span className="text-blue-500 font-bold inline-flex items-center">
-                  Read Article 
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </div>
-            </div>
+          <article key={post.slug} className="...">
           </article>
         ))}
       </section>
 
       <footer className="mt-20 py-10 border-t border-gray-200 text-center text-gray-400">
-        <p>© 2026 {data.generalSettings.title}. Powered by Next.js & Headless WordPress.</p>
+        <p>© 2026 {data.generalSettings.title}.</p>
       </footer>
     </main>
   );
