@@ -1,14 +1,10 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Truck, ShieldCheck, Clock, MapPin, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export const metadata = {
-  title: "Déménagement pour Particuliers | Formules sur Mesure",
-  description:
-    "Accompagnement complet pour votre déménagement résidentiel. Protection, démontage, transport et remontage par des professionnels.",
-};
 
 const ServiceDetail = () => {
   return (

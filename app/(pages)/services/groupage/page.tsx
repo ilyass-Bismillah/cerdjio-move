@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { Truck, Globe, Leaf, ChevronRight } from "lucide-react";
@@ -13,12 +14,6 @@ const destinations = [
   { country: "Luxembourg", frequency: "2 à 3 fois par mois" },
   { country: "Espagne", frequency: "Régulièrement" },
 ];
-
-export const metadata = {
-  title: "Transport de Colis & Groupage Europe | Cerdjio Move",
-  description:
-    "Solutions de transport de colis et groupage économique vers la Belgique, l'Espagne et l'Europe. Sécurité et rapidité garanties.",
-};
 
 const GroupagePage = () => {
   return (
