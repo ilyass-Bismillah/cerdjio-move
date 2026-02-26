@@ -1,8 +1,8 @@
 "use client";
 import { Globe, Navigation, Truck } from "lucide-react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function EuropePage() {
   const cities = ["Bruxelles", "Liège", "Anvers", "Gand", "Bruges"];
