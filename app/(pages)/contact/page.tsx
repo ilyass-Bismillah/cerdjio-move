@@ -36,10 +36,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_3a1btrf",
-        "template_n48buad",
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, 
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, 
         formRef.current!,
-        "EL32gjbcAStDwEVBg",
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!, 
       )
       .then(
         () => {
@@ -157,7 +157,10 @@ const Contact = () => {
                     </Label>
                   </div>
                   <div className="flex items-center gap-3">
-                    <RadioGroupItem value="je ne sais pas" id="je-ne-sais-pas" />
+                    <RadioGroupItem
+                      value="je ne sais pas"
+                      id="je-ne-sais-pas"
+                    />
                     <Label htmlFor="je-ne-sais-pas" className="text-gray-400">
                       Je ne sais pas
                     </Label>
@@ -232,7 +235,10 @@ const Contact = () => {
                     </Label>
                   </div>
                   <div className="flex items-center gap-3">
-                    <RadioGroupItem value="je ne sais pas" id="je-ne-sais-pas" />
+                    <RadioGroupItem
+                      value="je ne sais pas"
+                      id="je-ne-sais-pas"
+                    />
                     <Label htmlFor="je-ne-sais-pas" className="text-gray-400">
                       Je ne sais pas
                     </Label>
@@ -332,7 +338,7 @@ const Contact = () => {
             <Button
               type="submit"
               variant="green"
-              disabled={isSending} 
+              disabled={isSending}
               className={`w-full h-16 lg:text-xl font-black uppercase tracking-widest shadow-green-800 hover:scale-[1.01] transition-all ${
                 isSending ? "opacity-50 cursor-not-allowed" : ""
               }`}
