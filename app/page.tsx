@@ -75,8 +75,8 @@ export default async function Home() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-red-500">Mouchkil f l-ittisal!</h1>
-          <p className="text-gray-600">T-akkdi men NEXT_PUBLIC_WORDPRESS_API_URL f Vercel.</p>
+          <h1 className="text-2xl font-bold text-red-500">Error!</h1>
+          <p className="text-gray-600">Check in NEXT_PUBLIC_WORDPRESS_API_URL.</p>
         </div>
       </div>
     );
