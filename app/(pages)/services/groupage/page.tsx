@@ -19,7 +19,7 @@ const GroupagePage = () => {
   return (
     <div className="bg-[#0a0a0a] text-gray-200 relative">
       <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
-        <section className="h-screen flex flex-col lg:flex-row items-center max-w-7xl mx-auto px-6 gap-10">
+        <section className="lg:h-screen h-full flex flex-col lg:flex-row items-center max-w-7xl mx-auto px-6 gap-10">
           <div className="mt-20 lg:mt-0">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
@@ -198,7 +198,7 @@ const GroupagePage = () => {
         alt=""
         width={100}
         height={100}
-        className="absolute top-1/5 left-10"
+        className="absolute lg:top-1/5 top-1/4 lg:left-10 -left-12"
       />
       <Image
         src="/2.png"

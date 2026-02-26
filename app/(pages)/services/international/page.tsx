@@ -65,7 +65,7 @@ export default function InternationalPage() {
       </section>
 
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-3 gap-10">
           {[
             {
               title: "Fret Routier",
@@ -102,25 +102,25 @@ export default function InternationalPage() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-white/5 border-y border-white/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-4xl font-black uppercase italic">
+      <section className="py-24 md:px-6 bg-white/5 border-y border-white/5 relative overflow-hidden">
+        <div className="2xl:max-w-7xl lg:max-w-5xl mx-auto">
+          <div className="mb-12 text-left flex flex-col items-center gap-4">
+            <div className="">
+              <h2 className="md:text-4xl text-3xl font-black uppercase italic">
                 Réseau & <br />{" "}
                 <span className="text-green-500">Lignes Directes</span>
               </h2>
             </div>
-            <p className="text-gray-500 text-sm max-w-xs font-bold uppercase tracking-widest">
+            <p className="text-gray-500 text-sm md:max-w-xs max-w-65 font-bold uppercase tracking-widest">
               Suivi GPS en temps réel sur tous nos trajets internationaux.
             </p>
           </div>
 
-          <div className="grid gap-4">
+          <div className="px-5 space-y-5 md:px-0 md:space-y-0 md:grid gap-10">
             {routes.map((route, i) => (
               <div
                 key={i}
-                className="flex flex-col md:flex-row md:items-center justify-between p-8 rounded-3xl bg-black border border-white/5 hover:bg-gray-900/50 transition-colors"
+                className="flex flex-col md:flex-row items-center md:justify-between p-8 rounded-3xl bg-black border border-white/5 hover:bg-gray-900/50 transition-colors"
               >
                 <div className="flex items-center justify-between gap-6 mb-4 md:mb-0">
                   <div className="text-2xl font-black text-white italic">
