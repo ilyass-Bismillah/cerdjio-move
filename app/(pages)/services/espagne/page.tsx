@@ -17,7 +17,7 @@ export default function EspagnePage() {
       <section className="relative pt-32 pb-20 px-6">
         <div className="absolute top-0 right-0 w-150 h-150 bg-green-500/10 blur-[130px] rounded-full -z-10" />
 
-        <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
+        <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid lg:grid-cols-[1.3fr_0.7fr] gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -89,7 +89,7 @@ export default function EspagnePage() {
       </section>
 
       <section className="py-24 px-6 border-t border-white/5">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+        <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="p-10 rounded-[2.5rem] bg-linear-to-br from-white/5 to-transparent border border-white/10 group hover:border-green-500/30 transition-all">
             <Sun
               className="text-green-500 mb-6 group-hover:scale-110 transition-transform"

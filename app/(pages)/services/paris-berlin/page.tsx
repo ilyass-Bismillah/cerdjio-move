@@ -10,7 +10,7 @@ const ParisBerlin = () => {
   return (
     <div className="bg-[#0a0a0a] text-gray-200 pb-20">
       <section className="relative py-20 px-6 bg-linear-to-b from-green-900/20 to-black border-b border-white/5">
-        <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid md:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -72,8 +72,8 @@ const ParisBerlin = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
-        <div className="grid md:grid-cols-2 gap-8">
+      <section className="py-20 px-6 2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8">
           <div className="bg-white/5 p-10 rounded-[3rem] border border-white/10 hover:border-white/20 transition-all">
             <div className="flex items-center gap-4 mb-8">
               <div className="p-3 bg-white/10 rounded-2xl">

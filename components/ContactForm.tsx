@@ -64,8 +64,8 @@ const ContactForm = () => {
   };
   return (
     <div className="my-20">
-    <h3 className="text-center mt-10 text-gray-200 text-xl lg:max-w-5xl max-w-sm mx-auto my-5">Veuillez bien remplir les champs du formulaire de contact  cela nous permettra de pouvoir vous faire une offre rapide et précise:</h3>
-      <div className="lg:max-w-5xl max-w-sm mx-auto bg-gray-900/40 backdrop-blur-xl p-6 md:p-10 rounded-2xl border border-gray-800 shadow-2xl">
+    <h3 className="text-center mt-10 text-gray-200 text-xl md:max-w-5xl max-w-sm mx-auto my-5">Veuillez bien remplir les champs du formulaire de contact  cela nous permettra de pouvoir vous faire une offre rapide et précise:</h3>
+      <div className="md:max-w-5xl max-w-sm mx-auto bg-gray-900/40 backdrop-blur-xl p-6 md:p-10 rounded-2xl border border-gray-800 shadow-2xl">
         <form ref={formRef} onSubmit={sendEmail} className="space-y-12">
           <div className="space-y-6">
             <h3 className="flex items-center gap-2 text-green-500 font-bold text-xl uppercase tracking-wider">

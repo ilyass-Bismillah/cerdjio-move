@@ -6,7 +6,7 @@ const Hero = () => {
       style={{ backgroundImage: "url('/bgHero.png')" }}
       className="relative bg-no-repeat bg-cover bg-center lg:h-screen h-full"
     >
-      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-sm max-w-xs mx-auto flex flex-col lg:flex-row items-center lg:justify-between h-full py-20 lg:py-0 space-y-20 lg:space-y-0">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl mx-auto flex flex-col lg:flex-row items-center lg:justify-between h-full py-20 lg:py-0 space-y-20 lg:space-y-0">
         <div className="space-y-8">
           <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-white">
             Logistique <br />

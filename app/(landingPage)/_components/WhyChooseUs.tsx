@@ -27,7 +27,7 @@ const reasons = [
 const WhyChooseUs = () => {
   return (
     <section className="py-24 px-6 bg-[#0f1117]">
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <h2 className="text-4xl font-extrabold text-white leading-tight">
             Pourquoi faire confiance à <br />

@@ -39,7 +39,7 @@ const Testimonials = () => {
           backgroundSize: "50px 50px",
         }}
       ></div>
-      <div className="relative 2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto z-10">
+      <div className="relative 2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             Ce que disent{" "}

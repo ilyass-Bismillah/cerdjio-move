@@ -8,7 +8,7 @@ import Link from "next/link";
 const EntreprisesPage = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white pt-10">
-      <section className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto px-6 py-20">
+      <section className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-[1fr_0.7fr] gap-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

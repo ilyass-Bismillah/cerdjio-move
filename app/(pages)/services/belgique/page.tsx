@@ -9,7 +9,7 @@ export default function EuropePage() {
 
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white py-20">
-      <div className="2xl:max-w-7xl lg:max-w-5xl mx-auto px-6">
+      <div className="2xl:max-w-7xl lg:max-w-5xl  mx-auto px-6">
         <div className="text-center mb-24">
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -51,7 +51,7 @@ export default function EuropePage() {
           ))}
         </div>
 
-        <div className="rounded-[3rem] bg-green-600 p-12 md:p-20 text-black flex flex-col md:flex-row justify-between items-center gap-10">
+        <div className="relative rounded-[3rem] bg-green-600 p-12 md:p-20 text-black flex flex-col lg:flex-row justify-between items-center gap-10">
           <div className="text-center md:text-left">
             <h2 className="text-4xl md:text-6xl font-black uppercase italic leading-none mb-4">
               Lignes <br /> Quotidiennes
@@ -62,7 +62,7 @@ export default function EuropePage() {
           </div>
           <Truck
             size={150}
-            className="opacity-20 absolute right-10 hidden md:block"
+            className="opacity-20 absolute right-0 bottom-0 hidden md:block rotate-10"
           />
           <Button
             variant={"default"}

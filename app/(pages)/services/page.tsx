@@ -55,8 +55,8 @@ const ServicesOverview = () => {
         </motion.div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {allServices.map((service, index) => (
             <motion.div
               key={service.slug}
@@ -94,7 +94,7 @@ const ServicesOverview = () => {
       </section>
 
       <section className="border-y border-white/5 bg-white/5 py-12 my-10">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             {
               label: "Assurance Ad Valorem",

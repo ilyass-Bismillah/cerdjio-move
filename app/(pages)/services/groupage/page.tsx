@@ -18,13 +18,13 @@ const destinations = [
 const GroupagePage = () => {
   return (
     <div className="bg-[#0a0a0a] text-gray-200 relative">
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
         <section className="lg:h-screen h-full flex flex-col lg:flex-row items-center max-w-7xl mx-auto px-6 gap-10">
           <div className="mt-20 lg:mt-0">
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="text-cerdjio-accent font-bold tracking-widest uppercase mb-4 block"
+              className="text-green-500 font-bold tracking-widest uppercase mb-4 block"
             >
               Solution Économique
             </motion.span>
@@ -35,7 +35,7 @@ const GroupagePage = () => {
               className="text-5xl md:text-7xl font-black text-white italic uppercase leading-none"
             >
               Le Groupage <br />{" "}
-              <span className="text-cerdjio-primary">Intelligent</span>
+              <span className="text-green-500">Intelligent</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -48,7 +48,7 @@ const GroupagePage = () => {
               Ainsi, vous ne payez pas plein pot, mais seulement le volume que
               vous utilisez réellement !
             </motion.p>
-            <span className="block text-cerdjio-primary font-bold mt-4">
+            <span className="block text-green-500 font-bold mt-4">
               Vous bénéficierez d’un tarif avantageux.
             </span>
             <p className="text-gray-500 mt-4 max-w-3xl leading-relaxed">
@@ -70,7 +70,7 @@ const GroupagePage = () => {
         </section>
 
         <section className="relative py-20 px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-black text-green-500 uppercase italic mb-6">
                 Pourquoi choisir le groupage ?
@@ -125,7 +125,7 @@ const GroupagePage = () => {
         </section>
 
         <section className="py-20 bg-green-500/5 text-white rounded-3xl">
-          <div className="max-w-7xl mx-auto px-6">
+          <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto px-6">
             <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
               <div>
                 <h2 className="text-4xl font-black italic uppercase">
@@ -142,13 +142,13 @@ const GroupagePage = () => {
               {destinations.map((dest, i) => (
                 <div
                   key={i}
-                  className="group p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-cerdjio-primary transition-all"
+                  className="group p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-green-500 transition-all"
                 >
                   <h4 className="text-xl font-bold mb-1">{dest.country}</h4>
-                  <p className="text-cerdjio-primary text-sm font-semibold">
+                  <p className="text-green-500 text-sm font-semibold">
                     {dest.frequency}
                   </p>
-                  <div className="h-1 w-0 group-hover:w-full bg-cerdjio-primary mt-4 transition-all duration-300"></div>
+                  <div className="h-1 w-0 group-hover:w-full bg-green-500 mt-4 transition-all duration-300"></div>
                 </div>
               ))}
             </div>
@@ -157,7 +157,7 @@ const GroupagePage = () => {
 
         <section className="py-24 text-center">
           <div className="max-w-3xl mx-auto px-6">
-            <h2 className="text-4xl font-black text-cerdjio-dark uppercase italic mb-8">
+            <h2 className="text-4xl font-black text-gray-200 uppercase italic mb-8">
               Prêt à économiser sur votre trajet ?
             </h2>
             <div className="flex flex-col md:flex-row gap-4 justify-center">

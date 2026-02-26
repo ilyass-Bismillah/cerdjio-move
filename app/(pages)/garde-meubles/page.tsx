@@ -85,7 +85,7 @@ const GardeMeubles = () => {
         </div>
       </section>
 
-      <section className="py-16 px-6 2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
+      <section className="py-16 px-6 2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
         <div className="grid lg:grid-cols-3 gap-12">
           <div className="lg:col-span-1">
             <h2 className="text-3xl font-black text-gray-200 uppercase italic mb-8 border-l-8 border-green-500 pl-4">

@@ -13,7 +13,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer className="bg-[#0a0c10] border-t border-gray-800 pt-16 pb-8 px-6">
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-12">
         <div className="space-y-6">
           <div className="flex items-center gap-2">
             <div className="bg-green-600 p-2 rounded-lg text-white">
@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto pt-8 border-t border-gray-800 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-500">
         <p>© 2026 CERDJIO MOVE. Tous droits réservés.</p>
         <div className="flex gap-6 uppercase tracking-widest font-medium">
           <Link href="#" className="hover:text-white transition-colors">

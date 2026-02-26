@@ -3,7 +3,7 @@ import { ShieldCheck } from "lucide-react";
 const AboutPage = () => {
   return (
     <div className="bg-[#0f1117] min-h-screen pt-32 pb-20 px-6">
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
         <div className="text-center mb-20">
           <h2 className="text-green-500 font-bold tracking-widest uppercase mb-4">
             Notre Histoire

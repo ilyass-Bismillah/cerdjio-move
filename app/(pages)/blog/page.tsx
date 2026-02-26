@@ -39,7 +39,7 @@ const posts = [
 export default function BlogPage() {
   return (
     <div className="bg-[#0f1117] min-h-screen pt-32 pb-20 px-6">
-      <div className="2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto">
+      <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-green-600/10 text-green-500 px-4 py-2 rounded-full text-sm font-bold mb-4 uppercase tracking-widest">
             <BookOpen size={16} /> Le Blog Cerdjio
