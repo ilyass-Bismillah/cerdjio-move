@@ -31,7 +31,7 @@ export default function FAQPage() {
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-black mb-4">
-            QUESTIONS <span className="text-orange-500">FRÉQUENTES</span>
+            QUESTIONS <span className="text-green-500">FRÉQUENTES</span>
           </h1>
           <p className="text-gray-400">
             Tout ce que vous devez savoir pour préparer votre déménagement en
@@ -46,14 +46,22 @@ export default function FAQPage() {
           className="space-y-4"
         >
           {faqs.map((item, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden p-6 hover:border-gray-700 transition-colors">
-              <AccordionTrigger className="text-lg font-bold text-orange-500 mb-3 italic">{item.q}</AccordionTrigger>
-              <AccordionContent className="text-gray-400 leading-relaxed">{item.a}</AccordionContent>
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden p-6 hover:border-gray-700 transition-colors"
+            >
+              <AccordionTrigger className="text-lg font-bold text-green-500 mb-3 italic">
+                {item.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-gray-400 leading-relaxed">
+                {item.a}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <div className="mt-20 p-8 rounded-3xl bg-orange-600 text-center">
+        <div className="mt-20 p-8 rounded-3xl bg-green-900 text-center">
           <h2 className="text-2xl font-bold mb-4">
             Vous avez une autre question ?
           </h2>
@@ -62,7 +70,7 @@ export default function FAQPage() {
           </p>
           <Button
             variant={"outline"}
-            className="text-orange-600 hover:bg-gray-200 hover:text-orange-700 font-bold"
+            className="text-green-600 hover:bg-gray-200 hover:text-green-700 font-bold"
           >
             Contactez-nous
           </Button>

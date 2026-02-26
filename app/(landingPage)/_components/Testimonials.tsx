@@ -40,11 +40,11 @@ const Testimonials = () => {
           backgroundSize: "50px 50px",
         }}
       ></div>
-      <div className="relative max-w-7xl mx-auto z-10">
+      <div className="relative 2xl:max-w-7xl lg:max-w-5xl max-w-sm mx-auto z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             Ce que disent{" "}
-            <span className="text-orange-500 font-black">nos clients</span>
+            <span className="text-green-500 font-black">nos clients</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
             La satisfaction de nos clients est notre priorité absolue. Voici
@@ -52,11 +52,11 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {reviews.map((rev, index) => (
             <div
               key={index}
-              className="bg-[#1a1c23]/80 backdrop-blur-sm p-8 rounded-[2rem] border border-white/5 hover:border-orange-500/30 transition-all duration-300 group"
+              className="bg-[#1a1c23]/80 backdrop-blur-sm p-8 rounded-[2rem] border border-white/5 hover:border-green-500/30 transition-all duration-300 group"
             >
               <div className="flex gap-1 mb-4">
                 {[...Array(rev.rating)].map((_, i) => (
@@ -73,15 +73,15 @@ const Testimonials = () => {
               </p>
 
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center font-bold text-white text-xl uppercase">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center font-bold text-white text-xl uppercase">
                   {rev.name[0]}
                 </div>
                 <div>
                   <h4 className="text-white font-bold">{rev.name}</h4>
-                  <p className="text-orange-500 text-sm">{rev.city}</p>
+                  <p className="text-green-500 text-sm">{rev.city}</p>
                 </div>
                 <Quote
-                  className="ml-auto text-gray-700 group-hover:text-orange-900 transition-colors"
+                  className="ml-auto text-gray-700 group-hover:text-green-900 transition-colors"
                   size={32}
                 />
               </div>

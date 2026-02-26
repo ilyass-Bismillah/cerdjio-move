@@ -18,15 +18,15 @@ const allServices = [
     title: "Déménagement Particuliers",
     slug: "particuliers",
     desc: "Un service clé en main pour votre maison ou appartement. On s'occupe de l'emballage, du démontage et du transport.",
-    icon: <Home size={40} className="text-orange-500" />,
-    color: "from-orange-500/20",
+    icon: <Home size={40} className="text-green-500" />,
+    color: "from-green-500/20",
   },
   {
     title: "Transfert d'Entreprise",
     slug: "entreprises",
     desc: "Optimisez votre déménagement professionnel. Bureaux, parcs informatiques et archives en toute sécurité.",
-    icon: <Building2 size={40} className="text-blue-500" />,
-    color: "from-blue-500/20",
+    icon: <Building2 size={40} className="text-green-500" />,
+    color: "from-green-500/20",
   },
   {
     title: "Liaison Internationale",
@@ -40,13 +40,13 @@ const allServices = [
 const ServicesOverview = () => {
   return (
     <div className="bg-[#0a0a0a] min-h-screen text-white">
-      <section className="py-24 px-4 text-center bg-linear-to-b from-orange-600/10 to-transparent">
+      <section className="py-24 px-4 text-center bg-linear-to-b from-green-600/10 to-transparent">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
         >
           <h1 className="text-5xl md:text-7xl font-black uppercase mb-6">
-            Nos <span className="text-orange-500">Services</span>
+            Nos <span className="text-green-500">Services</span>
           </h1>
           <p className="max-w-2xl mx-auto text-gray-400 text-lg">
             De la petite livraison au déménagement international complet,
@@ -63,7 +63,7 @@ const ServicesOverview = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`group relative p-8 rounded-3xl border border-white/10 bg-linear-to-b ${service.color} to-transparent hover:border-orange-500/50 transition-all`}
+              className={`group relative p-8 rounded-3xl border border-white/10 bg-linear-to-b ${service.color} to-transparent hover:border-green-500/50 transition-all`}
             >
               <div className="mb-6 bg-gray-900 w-16 h-16 rounded-2xl flex items-center justify-center border border-white/5 group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -74,8 +74,8 @@ const ServicesOverview = () => {
               </p>
               <Button
                 asChild
-                variant="ghost"
-                className="group/btn text-orange-500 hover:text-orange-400 p-0"
+                variant="link"
+                className="group/btn text-green-500 hover:text-green-400 p-0"
               >
                 <Link
                   href={`/services/${service.slug}`}
@@ -98,19 +98,19 @@ const ServicesOverview = () => {
           {[
             {
               label: "Assurance Ad Valorem",
-              icon: <ShieldCheck className="text-orange-500" />,
+              icon: <ShieldCheck className="text-green-500" />,
             },
             {
               label: "Equipe Qualifiée",
-              icon: <Star className="text-orange-500" />,
+              icon: <Star className="text-green-500" />,
             },
             {
               label: "Flotte Moderne",
-              icon: <Truck className="text-orange-500" />,
+              icon: <Truck className="text-green-500" />,
             },
             {
               label: "Suivi en Temps Réel",
-              icon: <Globe className="text-orange-500" />,
+              icon: <Globe className="text-green-500" />,
             },
           ].map((item, i) => (
             <div
@@ -127,7 +127,7 @@ const ServicesOverview = () => {
       </section>
 
       <section className="py-20 px-4">
-        <div className="max-w-5xl mx-auto bg-orange-600 rounded-[3rem] p-12 text-center text-black relative overflow-hidden">
+        <div className="max-w-5xl mx-auto bg-green-600 rounded-[3rem] p-12 text-center text-black relative overflow-hidden">
           <div className="relative z-10">
             <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase">
               Prêt à déménager ?
@@ -148,6 +148,29 @@ const ServicesOverview = () => {
           <Truck className="absolute -bottom-10 -right-10 text-black/10 w-64 h-64 -rotate-12" />
         </div>
       </section>
+
+      <div className="text-center text-gray-400 py-12 space-y-4">
+        <p>
+          Pour obtenir un devis rapidement ou tout autre renseignement,
+          contactez-nous par téléphone :
+        </p>
+        <div className="flex items-center justify-center gap-5">
+          <Link
+            href="tel:+33612345678"
+            className="text-green-500 font-bold text-lg"
+          >
+            06 13 05 75 72
+          </Link>
+          <span>-</span>
+          <Link
+            href="tel:+33612345678"
+            className="text-green-500 font-bold text-lg"
+          >
+            03 44 93 01 17
+          </Link>
+        </div>
+        <p>Nous sommes à votre disposition.</p>
+      </div>
     </div>
   );
 };

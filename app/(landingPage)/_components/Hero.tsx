@@ -10,11 +10,11 @@ const Hero = () => {
         <div className="space-y-8">
           <h1 className="text-5xl lg:text-7xl font-extrabold leading-tight text-white">
             Logistique <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-orange-400 to-orange-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-green-300 to-green-600">
               D&apos;Excellence
             </span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-lg leading-relaxed">
+          <p className="text-lg text-gray-200 bg-gray-900/50 backdrop-blur-sm rounded-xl p-5 max-w-lg leading-relaxed">
             Un déménagement professionnel sans tracas. Nous assurons le
             transport de vos biens partout en France et en Europe avec une sécurité maximale.
           </p>

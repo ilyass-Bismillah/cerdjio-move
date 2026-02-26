@@ -102,12 +102,12 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
     <main className="min-h-screen bg-[#0a0a0a] text-white pt-32 pb-20">
       <div className="max-w-4xl mx-auto px-4">
         <Button variant={"link"}>
-        <Link
-          href="/blog"
-          className="flex items-center text-orange-500 hover:text-orange-400 mb-8 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" /> Retour au blog
-        </Link>
+          <Link
+            href="/blog"
+            className="flex items-center text-green-500 hover:text-green-400 mb-8 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" /> Retour au blog
+          </Link>
         </Button>
 
         <header className="mb-10">
@@ -117,13 +117,13 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
 
           <div className="flex flex-wrap gap-6 text-gray-400 text-sm">
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-orange-500" /> {post.date}
+              <Calendar className="w-4 h-4 text-green-500" /> {post.date}
             </div>
             <div className="flex items-center gap-2">
-              <User className="w-4 h-4 text-orange-500" /> Par {post.author}
+              <User className="w-4 h-4 text-green-500" /> Par {post.author}
             </div>
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-orange-500" /> {post.readTime} de
+              <Clock className="w-4 h-4 text-green-500" /> {post.readTime} de
               lecture
             </div>
           </div>
@@ -144,14 +144,17 @@ const BlogPost = async ({ params }: { params: { id: string } }) => {
           </div>
         </article>
 
-        <div className="mt-16 p-8 rounded-2xl bg-linear-to-br from-orange-500/10 to-transparent border border-orange-500/20 text-center">
+        <div className="mt-16 p-8 rounded-2xl bg-linear-to-br from-green-500/10 to-transparent border border-green-500/20 text-center">
           <h3 className="text-2xl font-bold mb-4">
             Besoin d&apos;aide pour votre déménagement ?
           </h3>
           <p className="text-gray-400 mb-6">
             Demandez votre devis gratuit en quelques minutes seulement.
           </p>
-          <Button variant={"orange"} className="font-bold transition-all px-8 py-5">
+          <Button
+            variant={"green"}
+            className="font-bold transition-all px-8 py-5"
+          >
             <Link href="/contact">Obtenir un devis</Link>
           </Button>
         </div>
