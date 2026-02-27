@@ -3,7 +3,23 @@ import Services from "./(landingPage)/_components/Services";
 import Testimonials from "./(landingPage)/_components/Testimonials";
 import WhyChooseUs from "./(landingPage)/_components/WhyChooseUs";
 
-async function getWordPressData() {
+const GET_HOME_CONTENT = `
+  query GetHomeContent {
+    page(id: "home", idType: URI) {
+      homePageContent { 
+        heroTitle
+        heroDesc
+        servicesTitle
+        testimonialsTitle
+        testimonialsDesc
+        whyTitle
+        whyImageQuote
+      }
+    }
+  }
+`;
+
+async function getHomeData() {
   const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
   if (!apiUrl) return null;
 
@@ -11,27 +27,32 @@ async function getWordPressData() {
     const res = await fetch(apiUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ query: '{ generalSettings { title } }' }),
-      cache: "no-store",
+      body: JSON.stringify({ query: GET_HOME_CONTENT }),
+      next: { revalidate: 60 }
     });
     
-    if (!res.ok) return null;
-    
-    const { data } = await res.json();
-    return data;
-  } catch {
+    const json = await res.json();
+    return json.data?.page?.homePageContent;
+  } catch (error) {
+    console.error("Error fetching WordPress data:", error);
     return null;
   }
 }
 
 export default async function Home() {
-  await getWordPressData();
+  const homeData = await getHomeData();
+
   return (
     <main className="bg-[#12141d]">
-      <Hero />
-      <Services />
+      <Hero 
+        initialTitle={homeData?.heroTitle} 
+        initialDesc={homeData?.heroDesc} 
+      />
+      
+      <Services title={homeData?.servicesTitle} />
+      
       <WhyChooseUs />
-      <Testimonials />
+      <Testimonials title={homeData?.testimonialsTitle} description={homeData?.testimonialsDesc} />
     </main>
   );
 }
