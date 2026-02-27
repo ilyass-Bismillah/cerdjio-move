@@ -1,4 +1,3 @@
-
 interface Post {
   title: string;
   excerpt: string;
@@ -22,7 +21,7 @@ interface WordPressData {
 
 async function getWordPressData(): Promise<WordPressData | null> {
   const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
-  
+
   if (!apiUrl) {
     console.error("API URL is missing!");
     return null;
@@ -55,10 +54,11 @@ async function getWordPressData(): Promise<WordPressData | null> {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query }),
       next: { revalidate: 60 },
+      cache: "no-store",
     });
 
     if (!res.ok) return null;
-    
+
     const { data } = await res.json();
     return data;
   } catch (error) {
@@ -66,7 +66,6 @@ async function getWordPressData(): Promise<WordPressData | null> {
     return null;
   }
 }
-
 
 export default async function Home() {
   const data = await getWordPressData();
@@ -76,7 +75,9 @@ export default async function Home() {
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-red-500">Error!</h1>
-          <p className="text-gray-600">Check in NEXT_PUBLIC_WORDPRESS_API_URL.</p>
+          <p className="text-gray-600">
+            Check in NEXT_PUBLIC_WORDPRESS_API_URL.
+          </p>
         </div>
       </div>
     );
@@ -97,8 +98,7 @@ export default async function Home() {
 
       <section className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post: Post) => (
-          <article key={post.slug} className="...">
-          </article>
+          <article key={post.slug} className="..."></article>
         ))}
       </section>
 
