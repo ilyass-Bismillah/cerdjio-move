@@ -5,7 +5,7 @@ import WhyChooseUs from "./(landingPage)/_components/WhyChooseUs";
 
 const GET_HOME_CONTENT = `
   query GetHomeContent {
-    page(id: "home", idType: URI) {
+    page(id: "/", idType: URI) {
       homePageContent { 
         heroTitle
         heroDesc
