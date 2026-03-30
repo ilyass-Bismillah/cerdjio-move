@@ -174,17 +174,17 @@ const GardeMeubles = () => {
         </p>
         <div className="flex items-center justify-center gap-5">
           <Link
-            href="tel:+33612345678"
+            href="tel:+00000000000"
             className="text-green-500 font-bold text-lg"
           >
-            06 13 05 75 72
+            00 00 00 00 00
           </Link>
           <span>-</span>
           <Link
-            href="tel:+33612345678"
+            href="tel:+00000000000"
             className="text-green-500 font-bold text-lg"
           >
-            03 44 93 01 17
+            00 00 00 00 00
           </Link>
         </div>
         <p>Nous sommes à votre disposition.</p>

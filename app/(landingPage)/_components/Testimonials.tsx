@@ -1,10 +1,5 @@
 import { Star, Quote } from "lucide-react";
 
-interface TestimonialsProps {
-  title?: string;
-  description?: string;
-}
-
 const reviews = [
   {
     name: "Marc Dubois",
@@ -32,7 +27,7 @@ const reviews = [
   },
 ];
 
-const Testimonials = ({ title, description }: TestimonialsProps) => {
+const Testimonials = () => {
   return (
     <section className="relative py-24 px-6 overflow-hidden bg-[#0f1117]">
       <div className="absolute inset-0 bg-[#0f1117]"></div>
@@ -47,14 +42,12 @@ const Testimonials = ({ title, description }: TestimonialsProps) => {
       <div className="relative 2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
-           {title ? (
-                <div dangerouslySetInnerHTML={{ __html: title }} />
-            ) : (
-                <>Ce que disent <span className="text-green-500 font-black">nos clients</span></>
-            )}
+            Ce que disent{" "}
+            <span className="text-green-500 font-black">nos clients</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            {description || "La satisfaction de nos clients est notre priorité absolue. Voici leurs retours."}
+            La satisfaction de nos clients est notre priorité absolue. Voici
+            leurs retours.
           </p>
         </div>
 

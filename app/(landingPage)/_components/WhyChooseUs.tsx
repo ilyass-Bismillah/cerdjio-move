@@ -1,11 +1,6 @@
 import { ShieldCheck, Truck, Clock, Headphones } from "lucide-react";
 import Image from "next/image";
 
-interface WhyChooseUsProps {
-  title?: string;
-  imageQuote?: string;
-}
-
 const reasons = [
   {
     title: "Sécurité Garantie",
@@ -29,17 +24,14 @@ const reasons = [
   },
 ];
 
-const WhyChooseUs = ({ title, imageQuote }: WhyChooseUsProps) => {
+const WhyChooseUs = () => {
   return (
     <section className="py-24 px-6 bg-[#0f1117]">
       <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto grid lg:grid-cols-2 gap-16 items-center">
         <div className="space-y-8">
           <h2 className="text-4xl font-extrabold text-white leading-tight">
-            {title ? (
-                <div dangerouslySetInnerHTML={{ __html: title }} />
-            ) : (
-                <>Pourquoi faire confiance à <br /> <span className="text-green-500">Cerdjio Déménagement ?</span></>
-            )}
+            Pourquoi faire confiance à <br />{" "}
+            <span className="text-green-500">Cerdjio Déménagement ?</span>
           </h2>
 
           <div className="grid sm:grid-cols-2 gap-8 pt-4">
@@ -69,7 +61,9 @@ const WhyChooseUs = ({ title, imageQuote }: WhyChooseUsProps) => {
             />
             <div className="absolute bottom-6 left-6 right-6 bg-green-600 p-6 rounded-2xl">
               <p className="text-white font-bold text-lg italic">
-               &quot;{imageQuote || "On prend soin de vos meubles comme s'ils étaient les nôtres."}&quot;
+                &quot;
+                  On prend soin de vos meubles comme s&apos;ils étaient les nôtres.
+                &quot;
               </p>
             </div>
           </div>

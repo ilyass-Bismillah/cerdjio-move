@@ -1,11 +1,5 @@
 import ContactForm from "@/components/ContactForm";
 
-export const metadata = {
-  title: "Contact & Devis Gratuit | Cerdjio Move Déménagement",
-  description:
-    "Demandez votre estimation gratuite en ligne pour votre déménagement international. Notre équipe vous répond sous 24h.",
-};
-
 const Contact = () => {
   return (
     <div>

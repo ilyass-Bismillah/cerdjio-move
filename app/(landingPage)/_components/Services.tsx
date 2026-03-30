@@ -1,9 +1,5 @@
 import { Home, Building2, Warehouse } from "lucide-react";
 
-interface ServicesProps {
-  title?: string;
-}
-
 const services = [
   {
     title: "Déménagement Particulier",
@@ -22,12 +18,12 @@ const services = [
   },
 ];
 
-const Services = ({ title }: ServicesProps) => {
+const Services = () => {
   return (
     <section className="py-24 px-6 bg-[#12141d]" id="services">
       <div className="2xl:max-w-7xl lg:max-w-5xl md:max-w-xl max-w-sm mx-auto">
         <h2 className="text-3xl font-bold text-white mb-12 text-center underline decoration-green-600 decoration-4 underline-offset-8">
-          {title || "Nos Services"}
+          Nos Services
         </h2>
 
         <div className="grid lg:grid-cols-3 gap-8">

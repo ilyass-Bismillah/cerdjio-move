@@ -4,7 +4,7 @@ import { MessageCircle } from 'lucide-react';
 import Link from 'next/link';
 
 const WhatsAppWidget = () => {
-  const phoneNumber = "0613057572"; 
+  const phoneNumber = "0000000000"; 
   const message = "Bonjour Cerdjio Move, je souhaite avoir plus d'informations sur vos services.";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

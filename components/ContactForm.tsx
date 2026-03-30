@@ -18,11 +18,6 @@ import { Textarea } from "@/components/ui/textarea";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 
-export const metadata = {
-  title: "Contact & Devis Gratuit | Cerdjio Move Déménagement",
-  description:
-    "Demandez votre estimation gratuite en ligne pour votre déménagement international. Notre équipe vous répond sous 24h.",
-};
 
 const ContactForm = () => {
   const formRef = React.useRef<HTMLFormElement>(null);
